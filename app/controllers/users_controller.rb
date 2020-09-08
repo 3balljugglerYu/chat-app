@@ -6,8 +6,13 @@ class UsersController < ApplicationController
   def update
     if current_user.update(user_params)
       redirect_to root_path
+      # redirect_to edit_user_registration_path
+      # redirect_to edit_user_path
+      # render :index
     else
       render :edit
+      # render :index
+      # redirect_to edit_user
     end
   end
 
